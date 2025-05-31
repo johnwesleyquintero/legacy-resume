@@ -1,4 +1,4 @@
-# Legacy Resume README
+# Legacy Resume
 
 ## Overview
 
