@@ -1,0 +1,820 @@
+<style>
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f8fa;
+    --text-primary: #2c3e50;
+    --text-secondary: #1a365d;
+    --accent: #0073e6;
+    --border: #e2e8f0
+  }
+
+  [data-theme=dark] {
+    --bg-primary: #1a1f36;
+    --bg-secondary: #151929;
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e0;
+    --accent: #60a5fa;
+    --border: #2d3748
+  }
+
+  .theme-switch {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: .5rem;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all .3s ease
+  }
+
+  .theme-switch:hover {
+    transform: scale(1.1)
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem auto;
+    display: block;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 16px rgba(0, 115, 230, .15);
+    transition: transform .3s ease, box-shadow .3s ease
+  }
+
+  .profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 115, 230, .2)
+  }
+
+  .portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(145deg, #f6f8fa 0, #fff 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
+  }
+
+  .section-header {
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: .5rem;
+    margin: 2rem 0 1rem;
+    color: #1a365d
+  }
+
+  .details-block {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin: 1rem 0;
+    transition: all .3s ease
+  }
+
+  .details-block:hover {
+    box-shadow: 0 4px 12px rgba(0, 115, 230, .1)
+  }
+
+  .details-block summary {
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none
+  }
+
+  .details-block summary:hover {
+    background: #f8fafc
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5rem 0;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    transition: all .3s ease
+  }
+
+  td,
+  th {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    text-align: left;
+    font-size: .95rem;
+    line-height: 1.5;
+    transition: background-color .2s ease
+  }
+
+  th {
+    background: var(--bg-primary);
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: .05em;
+    white-space: nowrap
+  }
+
+  tr:last-child td {
+    border-bottom: none
+  }
+
+  td:first-child,
+  th:first-child {
+    border-left: none
+  }
+
+  td:last-child,
+  th:last-child {
+    border-right: none
+  }
+
+  tr:hover {
+    background: var(--bg-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05)
+  }
+
+  .details-block table {
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: none;
+    border: 1px solid var(--border)
+  }
+
+  .details-block table tr:hover {
+    transform: none;
+    box-shadow: none
+  }
+
+  table td a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity .2s ease
+  }
+
+  table td a:hover {
+    opacity: .8
+  }
+
+  @media (max-width:768px) {
+
+    td,
+    th {
+      padding: .75rem 1rem
+    }
+
+    th {
+      white-space: normal
+    }
+  }
+</style>
+<div class="portfolio-container" data-theme="light">
+  <button class="theme-switch" onclick='document.querySelector(".portfolio-container").setAttribute("data-theme","light"===document.querySelector(".portfolio-container").getAttribute("data-theme")?"dark":"light")'>🌓</button>
+  <img src="https://avatars.githubusercontent.com/u/190981914?v=4" alt="Profile Photo" class="profile-photo">
+  <h1 id="📁-portfolio-data">📁 Portfolio Data</h1>
+  <p>
+    <em>
+      <strong>Amazon Specialist/Developer Profile</strong>
+    </em>
+  </p>
+  <div class="bio-section">
+    <p>Passionate Amazon e-commerce specialist and developer with a proven track record in building data-driven solutions. Combining technical expertise with business acumen to help brands scale through innovative automation and AI-powered tools. Currently leading the development of SellSmart platform while actively contributing to the Amazon seller community.</p>
+  </div>
+  <hr>
+  <h2 class="section-header">👤 Personal Information</h2>
+  <details class="details-block">
+    <summary>View Personal Information</summary>
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>Wesley Quintero</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>
+            <a href="/cdn-cgi/l/email-protection#c1e7e2f0f1f7fae7e2f0f0f0fae7e2f0f1f5fae7e2f0f0f1fae7e2b9f6f6fae7e2b9f7f4fae7e2b9f6f2fae7e2f0f1f9fae7e2b9f7f4fae7e2b9f6f8fae7e2b9f6f0fae7e2b9f6f4fae7e2f0f1f4fae7e2b9f7a4fae7e2f0f0f7fae7e2b9f7f4fae7e2f0f0f5fae7e2f0f0f0fae7e2b9f5f1fae7e2b9f7f6fae7e2b9f7a5fae7e2f8f6fae7e2f0f1f4fae7e2f0f1f9fae7e2b9f3a4fae7e2b9f7f2fae7e2f0f0f0fae7e2f0f1f8fa">&#106;&#111;&#104;&#110;&#x77;&#x65;&#x73;&#108;&#x65;&#x79;&#x71;&#x75;&#105;&#x6e;&#116;&#x65;&#114;&#111;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td>Tagum, Davao Region, Philippines</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>+63 950 446 9156</td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+  <h2 class="section-header">🔧 Amazon Developer Profile</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Role</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🏪 Amazon Seller Central</td>
+        <td>Certified Developer</td>
+        <td>
+          <a href="https://sellercentral.amazon.com/">Seller Portal</a>
+        </td>
+      </tr>
+      <tr>
+        <td>👩💻 Amazon Developer Central</td>
+        <td>API Integration Specialist</td>
+        <td>
+          <a href="https://developer.amazon.com/">Developer Portal</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <em>Actively developing Seller Tools through Amazon Marketplace Web Services (MWS)</em>
+  </p>
+  <hr>
+  <h2 class="section-header">🌟 Professional Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>🔑 Field</th>
+        <th>📝 Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🏷️ Title</td>
+        <td>Data-Driven Amazon &amp; E-commerce Specialist</td>
+      </tr>
+      <tr>
+        <td>💡 Tagline</td>
+        <td>Helping Brands Scale with Insights 📊, Automation 🤖 &amp; AI</td>
+      </tr>
+      <tr>
+        <td>📄 Description</td>
+        <td>Building AI-Powered Tools via Nebula-Singularity Platform</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 class="section-header">🛠️ Expertise Areas</h2>
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0
+    }
+
+    .skill-card {
+      position: relative;
+      background: var(--bg-secondary);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all .3s ease;
+      overflow: hidden
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--accent) 0, transparent 100%);
+      opacity: 0;
+      transition: opacity .3s ease
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 115, 230, .15)
+    }
+
+    .skill-card:hover::before {
+      opacity: .1
+    }
+
+    .skill-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      transition: transform .3s ease
+    }
+
+    .skill-card:hover .skill-icon {
+      transform: scale(1.1)
+    }
+
+    .skill-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary)
+    }
+
+    .skill-level {
+      position: relative;
+      height: 8px;
+      background: var(--bg-primary);
+      border-radius: 4px;
+      overflow: hidden
+    }
+
+    .skill-level-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+      transition: width 1s ease
+    }
+
+    .skill-percentage {
+      position: absolute;
+      top: -25px;
+      right: 0;
+      font-size: .875rem;
+      color: var(--text-secondary)
+    }
+  </style>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">📊</div>
+      <div class="skill-name">Data Analytics</div>
+      <div class="skill-level">
+        <div class="skill-level-fill" style="width:95%"></div>
+        <span class="skill-percentage">95%</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">💻</div>
+      <div class="skill-name">Programming</div>
+      <div class="skill-level">
+        <div class="skill-level-fill" style="width:90%"></div>
+        <span class="skill-percentage">90%</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🧠</div>
+      <div class="skill-name">Machine Learning</div>
+      <div class="skill-level">
+        <div class="skill-level-fill" style="width:85%"></div>
+        <span class="skill-percentage">85%</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🗃️</div>
+      <div class="skill-name">Database Management</div>
+      <div class="skill-level">
+        <div class="skill-level-fill" style="width:88%"></div>
+        <span class="skill-percentage">88%</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-name">AI Automation</div>
+      <div class="skill-level">
+        <div class="skill-level-fill" style="width:92%"></div>
+        <span class="skill-percentage">92%</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🤝</div>
+      <div class="skill-name">Client Relations</div>
+      <div class="skill-level">
+        <div class="skill-level-fill" style="width:94%"></div>
+        <span class="skill-percentage">94%</span>
+      </div>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Skills</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🔧 Technical (Expert)</td>
+        <td>📊 Data Analytics • 💻 Programming • 🧠 ML • 🗃️ DB Management</td>
+      </tr>
+      <tr>
+        <td>⚙️ Technical (Advanced)</td>
+        <td>🐍 Python/R/JS • 🤖 AI Automation • 🗄️ SQL/Supabase</td>
+      </tr>
+      <tr>
+        <td>🤝 Soft Skills</td>
+        <td>👥 Leadership • 💬 Client Relations • 🎯 Problem Solving</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h2 class="section-header">💼 Experience</h2>
+  <details class="details-block">
+    <summary>View Experience</summary>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Duration</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nebula-Singularity: SellSmart</td>
+          <td>Founder/Developer</td>
+          <td>2025 -01 - Present</td>
+          <td>All-in-One Amazon Seller Platform</td>
+        </tr>
+        <tr>
+          <td>My Amazon Guy</td>
+          <td>Amazon Specialist 2</td>
+          <td>Oct 2024 - Mar 2025</td>
+          <td>Skills: Data Visualization, Amazon SEO</td>
+        </tr>
+        <tr>
+          <td>Bulk Buy America</td>
+          <td>Item Specialist</td>
+          <td>Mar 2024 - Sep 2024</td>
+          <td>Remote US • Skills: VLOOKUP, Price Checker</td>
+        </tr>
+        <tr>
+          <td>Adorama</td>
+          <td>Marketplace Support</td>
+          <td>May 2023 - Sep 2023</td>
+          <td>Skills: B2B, Management</td>
+        </tr>
+        <tr>
+          <td>Champion E-com LLC</td>
+          <td>Amazon Account Manager</td>
+          <td>Oct 2022 - Sep 2023</td>
+          <td>Skills: B2B, Management</td>
+        </tr>
+        <tr>
+          <td>Sales.support</td>
+          <td>Amazon Wholesale Buyer</td>
+          <td>Oct 2018 - Jul 2022</td>
+          <td>Skills: B2B, Management</td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+  <hr>
+  <h2 class="section-header">🚀 Projects</h2>
+  <style>
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0
+    }
+
+    .project-card {
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform .3s ease
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px)
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover
+    }
+
+    .project-content {
+      padding: 1.5rem
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+      color: var(--text-secondary)
+    }
+
+    .project-description {
+      color: var(--text-primary);
+      margin-bottom: 1rem
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 1rem
+    }
+
+    .tech-badge {
+      padding: .25rem .75rem;
+      border-radius: 9999px;
+      font-size: .875rem;
+      background: var(--accent);
+      color: #fff;
+      opacity: .9
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem
+    }
+
+    .project-link {
+      padding: .5rem 1rem;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity .3s ease
+    }
+
+    .project-link:hover {
+      opacity: .9
+    }
+  </style>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">SellSmart</h3>
+        <p class="project-description">Modern web application for Amazon sellers featuring AI-powered analytics and automation tools.</p>
+        <div class="project-tech">
+          <span class="tech-badge">Vite</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Tailwind</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live Demo</a>
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">My Amazon Analytics</h3>
+        <p class="project-description">E-commerce optimization platform with advanced data visualization and insights.</p>
+        <div class="project-tech">
+          <span class="tech-badge">Next.js</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">GraphQL</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live Demo</a>
+          <a href="#" class="project-link">Case Study</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Demo App</h3>
+        <p class="project-description">Vercel-based demo showcasing modern web development practices and performance optimization.</p>
+        <div class="project-tech">
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Vercel</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live Demo</a>
+          <a href="#" class="project-link">Documentation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Focus Area</th>
+        <th>Deliverable</th>
+        <th>Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FBM Inventory Management</td>
+        <td>Listing Management &amp; Account Health</td>
+        <td>📄 SOP Document &amp; Process Flow</td>
+        <td>🎯 Enhanced operational efficiency by 40%</td>
+      </tr>
+      <tr>
+        <td>FBA Department Operations</td>
+        <td>Training &amp; Workflow Planning</td>
+        <td>📄 SOP Document &amp; Training Materials</td>
+        <td>🎯 Streamlined team productivity by 35%</td>
+      </tr>
+      <tr>
+        <td>Wholesale Buyer&#39;s Guide</td>
+        <td>Client Engagement &amp; Inventory</td>
+        <td>📄 SOP Document &amp; Best Practices</td>
+        <td>🎯 Improved client satisfaction rate to 95%</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h2 class="section-header">🎓 Education</h2>
+  <details class="details-block">
+    <summary>View Education</summary>
+    <table>
+      <thead>
+        <tr>
+          <th>Institution</th>
+          <th>Degree</th>
+          <th>Duration</th>
+          <th>Skills</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>University of Southeastern Philippines</td>
+          <td>Bachelor&#39;s degree, Elementary Education and Teaching (Licensed Professional Teacher)</td>
+          <td>2015 - 2019</td>
+          <td>Data Entry</td>
+        </tr>
+        <tr>
+          <td>Iowa State University</td>
+          <td>Educational Technology</td>
+          <td>May 2018</td>
+          <td>Data Entry</td>
+        </tr>
+        <tr>
+          <td>Magugpo Institute of Technology</td>
+          <td>Information Technology</td>
+          <td>2014</td>
+          <td>Data Entry</td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+  <h2 class="section-header">📚 Certifications</h2>
+  <details class="details-block">
+    <summary>View Certifications</summary>
+    <table>
+      <thead>
+        <tr>
+          <th>📛 Name</th>
+          <th>🏛️ Issuer</th>
+          <th>📅 Date</th>
+          <th>🟢 Status</th>
+          <th>🔖 Credential ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Amazon Advertising</td>
+          <td>Amazon</td>
+          <td>2023-01-01</td>
+          <td>Active</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Data Modeling</td>
+          <td>Pragmatic Works</td>
+          <td>2024-11-15</td>
+          <td>Active</td>
+          <td>PW-2024-DM</td>
+        </tr>
+        <tr>
+          <td>Catalog Management</td>
+          <td>MAG School</td>
+          <td>2024-10-01</td>
+          <td>Active</td>
+          <td>66a7c61defaf90db750bde04</td>
+        </tr>
+        <tr>
+          <td>Design &amp; Conversion</td>
+          <td>MAG School</td>
+          <td>2024-10-01</td>
+          <td>Active</td>
+          <td>66a7c65840e6a05d9005d5eb</td>
+        </tr>
+        <tr>
+          <td>Launching on Amazon</td>
+          <td>MAG School</td>
+          <td>2024-10-01</td>
+          <td>Active</td>
+          <td>66a7ce36b87e351e77072f99</td>
+        </tr>
+        <tr>
+          <td>Main Image CTR Course</td>
+          <td>MAG School</td>
+          <td>2024-10-01</td>
+          <td>Active</td>
+          <td>66a7c5d70ef423bb240bd554</td>
+        </tr>
+        <tr>
+          <td>SEO Optimization</td>
+          <td>MAG School</td>
+          <td>2024-10-01</td>
+          <td>Active</td>
+          <td>66a7c4f76b8386f0560b9407</td>
+        </tr>
+        <tr>
+          <td>Licensed Teacher</td>
+          <td>PRC</td>
+          <td>2021-05-01</td>
+          <td>Active</td>
+          <td>LPT-2021-05</td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+  <h2 class="section-header">🔗 Professional Links</h2>
+  <div class="links">
+    <table>
+      <thead>
+        <tr>
+          <th>Platform</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>LinkedIn</td>
+          <td>
+            <a href="https://www.linkedin.com/in/wesleyquintero/">View Profile</a>
+          </td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td>
+            <a href="https://github.com/johnwesleyquintero">View Repository</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Portfolio</td>
+          <td>
+            <a href="https://wesleyquintero-dev.vercel.app/">View Portfolio</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Certifications</td>
+          <td>
+            <a href="https://www.linkedin.com/in/wesleyquintero/details/certifications/">View Certifications</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 class="section-header">Metadata</h2>
+  <div class="details-block">
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Version</td>
+          <td>
+            <span class="badge active">1.0.0</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Last Updated</td>
+          <td>
+            <span class="badge">2025-03-13T21:56:41Z</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Schema</td>
+          <td>
+            <span class="badge active">portfolio-data-v1</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
